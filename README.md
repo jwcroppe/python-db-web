@@ -17,15 +17,20 @@ extends to any enterprise database, including Oracle, Db2, etc.
 This application assumes that you have already deployed the database tier on
 the IBM Power Virtual Server cloud. If you haven't, please follow [these steps](https://github.com/jwcroppe/terraform-provider-ibm-examples/tree/master/simple-vm-power-vs).
 
+## Building
+
+The Dockerfile has been provided if you would like to build the container yourself,
+otherwise it is also available on Docker Hub [here](XXX).
+
+```shell
+docker build -t python-db-web:latest .
+```
+
 ## Installation
 
 There are a variety of ways in which this application can be run. You can run
-this as a standable application or as a container. The Dockerfile has been
-provided if you would like to build the container yourself, otherwise it is also
-available on Docker Hub; these instructions assume the latter and that the
-Docker container runtime is used (feel free to tweak as appropriate).
-
-The following environment variables can be set to alter behavior:
+this as a standable application or as a container. The following environment
+variables can be set to alter behavior:
 
 ```shell
 SSH_REMOTE_SERVER - remote endpoint address for the SSH tunnel
@@ -37,7 +42,7 @@ FLASK_HOST - host name on the local server for the Flask server (default: 0.0.0.
 FLASK_PORT - port on the local server for the Flask server (default: 5000)
 ```
 
-Here are the steps to deploy this application:
+Here are the steps to deploy this application as a Docker container:
 
 ```shell
 docker pull jwcroppe/python-db-web
