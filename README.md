@@ -40,6 +40,7 @@ SSH_REMOTE_PASSWORD - password for the user on the remote SSH server (default: s
 SSH_TUNNEL_LOCAL_PORT - local port to be used for the SSH tunnel (default: 3306)
 FLASK_HOST - host name on the local server for the Flask server (default: 0.0.0.0)
 FLASK_PORT - port on the local server for the Flask server (default: 5000)
+ENTITY_NAME - name of the event to display when the page is rendered (default: IBM Systems Tech U Attendees)
 ```
 
 Here are the steps to deploy this application as a Docker container:
