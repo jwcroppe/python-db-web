@@ -20,7 +20,7 @@ the IBM Power Virtual Server cloud. If you haven't, please follow [these steps](
 ## Building
 
 The Dockerfile has been provided if you would like to build the container yourself,
-otherwise it is also available on Docker Hub [here](XXX).
+otherwise it is also available on Docker Hub [here](https://cloud.docker.com/repository/docker/jwcroppe/python-db-web).
 
 ```shell
 docker build -t python-db-web:latest .
