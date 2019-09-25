@@ -10,7 +10,7 @@
 #   SSH_TUNNEL_LOCAL_PORT: local port to be used for the SSH tunnel (default: 3306)
 #   FLASK_HOST: host name on the local server for the Flask server (default: 0.0.0.0)
 #   FLASK_PORT: port on the local server for the Flask server (default: 5000)
-#   ENTITY_NAME: name of the event to display when the page is rendered (default: IBM Power Systems Users)
+#   ENTITY_NAME: name of the event to display when the page is rendered (default: IBM Systems Tech U Attendees)
 
 from configdb import connection_kwargs
 from flask import Flask, render_template
@@ -30,7 +30,7 @@ server = SSHTunnelForwarder(
     local_bind_address=("127.0.0.1",
                         int(os.environ.get("SSH_TUNNEL_LOCAL_PORT", "3306")))
 )
-entity_name = os.environ.get("ENTITY_NAME", "IBM Power Systems Users")
+entity_name = os.environ.get("ENTITY_NAME", "IBM Systems Tech U Attendees")
 
 
 server.start()
