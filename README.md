@@ -51,7 +51,7 @@ docker run -p 5000:5000 -e "SSH_REMOTE_SERVER=AIX_LPAR_IP" jwcroppe/python-db-we
 ```
 
 Alternatively, here are the steps to deploy this application into a
-Red Hat OpenShift 3.11 cluster:
+Red Hat OpenShift 3.x cluster:
 
 ```shell
 oc login ... (the exact command will vary based on your OpenShift installation)
